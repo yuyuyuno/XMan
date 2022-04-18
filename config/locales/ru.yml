@@ -1,0 +1,50 @@
+ru:
+  activerecord:
+    models:
+      time_entry: Время
+    attributes:
+      time_entry:
+        title: Название
+        end: Конец
+        start: Начало
+        user: Владелец
+
+  time_entry:
+    no_title: Без описания
+  today: Сегодня
+
+
+  delete_confirmation: Вы уверены?
+
+  new_expense: Новый расход
+  add_expense: Добавить расход
+  logout: Выйти
+  expenses: Расходы
+  amount: Сумма
+  comment: Комментарий
+  expense_date: Дата покупки
+  category: Категория
+  Food: Еда
+  Alcohol: Алкоголь
+  Clothes: Одежда
+  Entertainment: Развелечения
+  Transport: Транспорт
+  register: Зарегистрироваться
+  expense: Расход
+  amount_placeholder: Сколько рублей вы потратили?
+  comment_placeholder: Информация про расход
+  manage: Управление расходами
+  show: Просмотреть
+  edit: Редактировать
+  destroy: Удалить
+  currency: руб.
+  username_placeholder: Придумайте логин
+  pw_placeholder: Пароль
+  pw_conf_placeholder: Еще раз пароль
+  login: У меня уже есть аккаунт
+  create: Создать аккаунт!
+  new_user: Регистрация
+  register: создайте новый аккаунт
+  login_form: Войти
+  reports: Сохранить отчет в csv
+

@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1> <%= t :expenses %> </h1>
+
+<div class="row mb-4">
+  <div class = "col">
+    <%= link_to t('new_expense'), new_expense_path, class: "btn btn-primary btn-lg" %>
+  </div>
+  <div class = "col">
+  <%= link_to t('reports'), { :action => "index", :format => :csv }, target: '_blank', class: "btn btn-primary btn-lg" %>
+
+  </div>
+</div>
+
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th><%= t('amount') %></th>
+      <th><%= t('comment') %></th>
+      <th><%= t('expense_date') %></th>
+      <th><%= t('category') %></th>
+      <th colspan="2"><%= t('manage') %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenses.each do |expense| %>
+      <tr>
+        <td><%= expense.amount %> </td>
+        <td><%= expense.comment %></td>
+        <td><%= l expense.expense_time.to_date, format: :long %></td>
+        <td><%= t(expense.category.category_name) %></td>
+        <td><%= link_to t('edit'), edit_expense_path(expense) %></td>
+        <td><%= link_to t('destroy'), expense, method: :delete, data: { confirm: t('delete_confirmation') } %></td>
+      </tr>
+    <% end %>
+    <tr> <td><%= @expenses.sum(:amount) %></td> </tr>
+  </tbody>
+</table>
+
